@@ -1,0 +1,137 @@
+/*
+ * General container style
+ */
+
+/* Center the containter and add an width */
+#woo-sc-container {
+	width: 800px;
+	position: fixed;
+	z-index: 99999;
+	bottom: 0;
+	left: 50%;
+	margin-left: -400px; /* Half of the width of the element */
+}
+
+@media all and (max-width: 800px) {
+	#woo-sc-container {
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+	}
+}
+
+
+/* Same color for button and content background */
+.woo-sc-button, #woo-sc-content { background: #fff; }
+
+/* The handle styling */
+#woo-sc-handle {
+	position: relative;
+	right: 0;
+	display: inline-block;
+}
+
+/*
+ * General button style
+ */
+
+.woo-sc-button {
+	font-size: 13px;
+	color: #444;
+	padding: 0.5em;
+	border:0;
+	border-radius:0;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	position: relative;
+	margin-bottom: -1px;
+}
+
+/* Button hover */
+.woo-sc-button:hover {
+	background: #fff;
+	color: #777;
+}
+
+/* Button count fragment */
+.woo-sc-button .count {
+	color: #777;
+	margin-left: 0.25em;
+}
+
+
+.woo-sc-button .amount:after {
+	font-family: "dashicons";
+	content: "\f343";
+	font-size: 20px;
+	vertical-align: -6px;
+}
+
+.open .woo-sc-button .amount:after {
+	font-family: "dashicons";
+	content: "\f335";
+}
+
+
+
+/*
+ * General content style
+ */
+
+#woo-sc-content { 
+	padding: 0.5em; 
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+/* Restyle the default WC widget */
+#woo-sc-content ul.cart_list li {
+	padding: 0.5em 0.5em 0.5em 2em;
+	height: 50px; /* We set height and line-height to the same value for vertical alignment (also see thumbnail styling) */
+	line-height: 50px;
+}
+
+/* Float the product thumbnail to the left, 
+ * change the margin,
+ * and give it a new size.
+ */
+#woo-sc-content ul.cart_list li img {
+	float: left;
+	margin: 0 0.5em;
+	width: 50px;
+}
+
+/* CSS3 based even/odd styling */
+#woo-sc-content ul.cart_list li:nth-child(odd) { background: #EBE9EB; }
+
+/* Align the product link (thumbnail and title) to the left */
+#woo-sc-content ul.cart_list li a { float: left; }
+
+/* Change the position of the remove link */
+#woo-sc-content ul.cart_list li a.remove {
+	left: 0.3em;
+	top: 1em;
+}
+
+/* Float the quantity (and price) to the right */
+#woo-sc-content ul.cart_list li .quantity { float: right; }
+
+/* Set the price text to bold */
+#woo-sc-content ul.cart_list li .quantity span { font-weight: bold; }
+
+/* Position the total price to the right */
+#woo-sc-content .total {
+	padding: 1em 0 0;
+	text-align: right;
+}
+
+/* Set a normal font-weight to the default <strong> element (yeah this is kind of dirty) */
+#woo-sc-content .total strong { font-weight: normal; }
+
+/* Set bold font-weight on total price */
+#woo-sc-content .total .amount { font-weight: bold; }
+
+/* Add some margin to the cart and checkout buttons */
+#woo-sc-content .buttons { margin: 1em 0; }
